@@ -1,0 +1,4 @@
+[submodule "ifcdaqdrv"]
+	path = ifcdaqdrv
+	url = https://bitbucket.org/europeanspallationsource/ifcdaqdrv.git
+	ignore = dirty
