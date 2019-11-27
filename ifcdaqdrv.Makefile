@@ -27,15 +27,15 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 
 
 
-ifneq ($(strip $(TSCLIB_DEP_VERSION)),)
-tsclib_VERSION=$(TSCLIB_DEP_VERSION)
+ifneq ($(strip $(TSC_DEP_VERSION)),)
+tsc_VERSION=$(TSC_DEP_VERSION)
 endif
 
 
 ifeq ($(E3_MODULE_VERSION),3.0.4)
-	APP:=ifcdaqdrv2App
+APP:=ifcdaqdrv2App
 else
-	APP:=ifcdaqdrvApp
+APP:=ifcdaqdrvApp
 endif
 
 
@@ -47,9 +47,9 @@ USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
 
 ifeq ($(E3_MODULE_VERSION),3.0.4)
-	HEADERS = $(APPSRC)/ifcdaqdrv2.h
+HEADERS = $(APPSRC)/ifcdaqdrv2.h
 else
-	HEADERS = $(APPSRC)/ifcdaqdrv.h
+HEADERS = $(APPSRC)/ifcdaqdrv.h
 endif
 HEADERS += $(APPSRC)/ifcfastintdrv2.h
 
@@ -66,12 +66,12 @@ SOURCES += $(APPSRC)/ifcfastintdrv.c
 SOURCES += $(APPSRC)/ifcfastintdrv_utils.c
 
 ifeq ($(E3_MODULE_VERSION),3.0.4)
-	SOURCES += $(APPSRC)/ifcdaqdrv_acq420.c
+SOURCES += $(APPSRC)/ifcdaqdrv_acq420.c
 else
-	SOURCES += $(APPSRC)/ifcdaqdrv_scope_lite.c
-	SOURCES += $(APPSRC)/ifcdaqdrv_gen_scope.c
-	SOURCES += $(APPSRC)/ifcdaqdrv_scope4ch.c
-	SOURCES += $(APPSRC)/ifcdaqdrv_scope20ch.c
+SOURCES += $(APPSRC)/ifcdaqdrv_scope_lite.c
+SOURCES += $(APPSRC)/ifcdaqdrv_gen_scope.c
+SOURCES += $(APPSRC)/ifcdaqdrv_scope4ch.c
+SOURCES += $(APPSRC)/ifcdaqdrv_scope20ch.c
 endif
 
 
