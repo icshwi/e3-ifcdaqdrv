@@ -1,4 +1,3 @@
 [submodule "ifcdaqdrv"]
 	path = ifcdaqdrv
-	url = https://github.com/icshwi/ifcdaqdrv
-	ignore = dirty
+	url = https://github.com/icshwi/ifcdaqdrv.git
